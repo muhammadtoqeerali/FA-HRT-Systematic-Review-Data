@@ -1,104 +1,108 @@
 # Data dictionary
 
-The workbooks contain one record per publication or reported summary item. Blank cells indicate that the information was not recorded in the source extraction; they do not necessarily mean zero or “no.” Publication identifiers P001–P102 are consistent across the study-level files.
+The workbooks retain the publication identifiers P001–P102 used in the review. Each worksheet has a header row. Blank cells indicate information not recorded in the extraction, not necessarily a zero or a negative finding.
 
-## Publication extraction
+## 1. Publication extraction
 
-`01_Data_Extraction/FA_HRT_102_Papers_GitHub_Clean_Extraction.xlsx` — 102 rows, 42 fields.
+**File:** `01_Data_Extraction/FA_HRT_102_Data_Extraction.xlsx`  
+**Coverage:** 102 publications; 42 fields.
 
 | Column | Description |
 |---|---|
-| Record ID | Publication identifier (P001–P102). |
+| Record ID | Stable publication identifier (P001–P102). |
 | Title | Publication title. |
-| Authors | Listed authors. |
+| Authors | Authors recorded in the extraction. |
 | Year | Publication year. |
-| Venue | Journal or conference. |
-| Research Objective or Purpose | Study aim. |
-| Application or Clinical Context | Intended use. |
-| Robot Device or System | Robot or assistive device. |
-| System or Platform Description | Main platform characteristics. |
-| Study Design or Approach | Study design or method. |
-| Experimental Setting | Test environment. |
-| Target Population | Intended users. |
+| Venue | Publication venue. |
+| Research Objective or Purpose | Main study aim. |
+| Application or Clinical Context | Intended setting or application. |
+| Robot Device or System | Robot or assistive device considered. |
+| System or Platform Description | Main platform features. |
+| Study Design or Approach | Research method or study design. |
+| Experimental Setting | Evaluation environment. |
+| Target Population | Intended user population. |
 | Participant Count | Number of participants, where reported. |
-| Participant Details | Participant characteristics. |
-| Age Details | Ages or age range. |
-| Sex or Gender Details | Reported sex or gender characteristics. |
-| Ethics and Consent | Ethics approval or consent information. |
-| Tasks or Activities | Activities studied. |
-| Fall Instability or Risk Scenarios | Fall or balance-related scenarios. |
-| Experimental Conditions or Trials | Test conditions and trials. |
-| Sensors or Inputs | Input measurements or signals. |
-| Data Source or Dataset | Dataset or data source. |
-| Dataset or Sample Size | Size of dataset or set of observations. |
-| Sampling Rate or Frequency | Data sampling frequency. |
-| Features or Representations | Features used in analysis. |
-| Algorithms Models or Analyses | Models, algorithms, or analytical methods. |
-| Control or Decision Strategy | Robot decision or control logic. |
-| Robot or System Output | System output or robot action. |
-| Hardware and Software | Implementation details. |
-| Training Validation Test Protocol | Model training and evaluation procedure. |
+| Participant Details | Reported participant characteristics. |
+| Age Details | Reported age information. |
+| Sex or Gender Details | Reported sex or gender information. |
+| Ethics and Consent | Ethics or consent information. |
+| Tasks or Activities | Activities examined. |
+| Fall Instability or Risk Scenarios | Fall- or balance-related conditions. |
+| Experimental Conditions or Trials | Tested conditions and trial details. |
+| Sensors or Inputs | Recorded or simulated inputs. |
+| Data Source or Dataset | Data source used by the study. |
+| Dataset or Sample Size | Reported dataset or sample size. |
+| Sampling Rate or Frequency | Sampling frequency, if reported. |
+| Features or Representations | Features used for analysis. |
+| Algorithms Models or Analyses | Models and analytical methods. |
+| Control or Decision Strategy | Robot control or decision logic. |
+| Robot or System Output | Robot action or system output. |
+| Hardware and Software | Main implementation components. |
+| Training Validation Test Protocol | Model training and testing procedure. |
 | Comparator or Baseline | Comparison method or condition. |
-| Outcome Measures | Outcomes assessed. |
-| Metrics Reported | Performance measures. |
-| Statistical Analysis | Statistical tests or analyses. |
-| Latency or Real Time Performance | Reported processing or response times. |
-| Main Quantitative Results | Main numerical results. |
-| Main Qualitative Findings | Main nonnumerical findings. |
-| Safety Related Outcomes | Safety measures, including simulated proxies. |
-| Human Centered or User Reported Outcomes | Participant or caregiver-reported outcomes. |
-| Failure Cases or Adverse Events | Failures or adverse observations. |
-| Author Reported Limitations | Limitations identified by the authors. |
-| Data or Code Availability | Availability reported in the source publication. |
+| Outcome Measures | Outcomes evaluated. |
+| Metrics Reported | Reported performance measures. |
+| Statistical Analysis | Reported statistical tests. |
+| Latency or Real Time Performance | Processing or response timings. |
+| Main Quantitative Results | Main numerical findings. |
+| Main Qualitative Findings | Main descriptive findings. |
+| Safety Related Outcomes | Physical-safety measures, including modeled proxies. |
+| Human Centered or User Reported Outcomes | User- or caregiver-related outcomes. |
+| Failure Cases or Adverse Events | Reported failures or adverse events. |
+| Author Reported Limitations | Limitations identified in the study. |
+| Data or Code Availability | Availability reported by the publication. |
 
-## Classification and research lineage
+## 2. Classification and research lineage
 
-`03_Evidence_Audits/FA_HRT_102_Classification_and_Lineage_Formatted.xlsx` — 102 rows, 34 fields.
+**File:** `03_Evidence_Audits/FA_HRT_102_Classification_and_Lineage_Formatted.xlsx`  
+**Coverage:** 102 publications; 34 fields.
 
-| Fields | Meaning |
+| Field group | Contents |
 |---|---|
-| P-code; Paper title; Citation key; Source DOI / URL | Publication identification and source link. |
-| Primary branch; Level-2 subtype | One primary classification and subtype per paper. |
-| Strongest validation | Highest reported evaluation setting used in the review. |
-| Research family (broad); Research family (high confidence) | Related research-program groupings, with different evidence thresholds. |
-| Primary evidence ID; Shared primary result with; Lineage evidence note | Links between repeated results and the basis for those links. |
-| Model / digital human; Walker/cane; Rehab/exoskeleton; Care/service; Smart-home; Balance/mobile | System or embodiment categories. |
-| Model/simulation/digital twin; Vision/depth/RF; Wearable/IMU; Force/contact/robot state; Multimodal/context | Evidence inputs. |
-| Elevated risk; Active instability; Near-onset; Direct pre-impact; Post-fall; Multistage | Fall timing or operational state. |
-| Model/state estimate; Monitor/verify; Predict/plan; Reactive/care response; Physical support/prevention | Robot function or action. |
+| Publication | P-code, title, citation key, DOI or source URL. |
+| Primary taxonomy | Primary branch and Level-2 subtype (one of each per publication). |
+| Validation | Strongest reported validation setting (one per publication). |
+| Research lineage | Broad and high-confidence family IDs, primary evidence ID, repeated-result link, and supporting note. |
+| System/embodiment | Model/digital human; walker/cane; rehabilitation/exoskeleton; care/service; smart-home; balance/mobile. |
+| Evidence source | Model/simulation/digital twin; vision/depth/RF; wearable/IMU; force/contact/robot state; multimodal/context. |
+| Fall timing | Elevated risk; active instability; near-onset; direct pre-impact; post-fall; multistage. |
+| Robot function | Model/state estimate; monitor/verify; predict/plan; reactive/care response; physical support/prevention. |
 
-The 22 cross-cutting category fields use **1** for a coded membership and **0** when membership was not coded. Categories can overlap. `Strongest validation` is assigned once per publication and is not a quality score.
+The 22 cross-cutting fields use `1` for coded membership and `0` for non-membership. Several categories may apply to a single publication. Validation settings describe the reported study context, not a quality score. Research-family links are provisional; only P006/P058 and P019/P022 were merged as repeated primary results.
 
-Related research families do not necessarily use the same dataset or experiment. Only P006/P058 and P019/P022 share identified primary results.
+## 3. Learned-detector validation audit
 
-## Learned-detector validation
+**File:** `03_Evidence_Audits/FA_HRT_35_Learned_Detector_Validation_Formatted.xlsx`  
+**Coverage:** 35 publications; 13 fields.
 
-`03_Evidence_Audits/FA_HRT_35_Learned_Detector_Validation_Formatted.xlsx` — 35 rows, 13 fields.
-
-| Fields | Meaning |
+| Field group | Contents |
 |---|---|
-| P-code; Paper title; Primary branch; Evaluated task | Study and task under review. |
-| Participant independence; Participant split evidence | Whether evaluation on unseen participants is established, and supporting details. |
-| Fall-event realism; Event evidence | Nature of the fall or instability events tested. |
-| False-alarm reporting; False-alarm evidence | Reported false alarms and their denominators. |
-| Monitoring hours verified | Whether active monitoring time was available for an alarm-rate calculation. |
-| Original publication URL | Source link. |
-| Interpretation and limitations | Limits on what the reported validation supports. |
+| Publication and task | P-code, paper title, primary branch, evaluated task. |
+| Participant independence | Coding and evidence for whether testing used participants unseen during training. |
+| Fall-event realism | Nature of the evaluated fall or instability events and supporting evidence. |
+| False alarms | Reporting type, denominator, and evidence for alarm-related findings. |
+| Monitoring hours | Whether continuous active monitoring time was verified. |
+| Source and limitations | Publication link and interpretation limits. |
 
-“Not reported” and “not established” refer to the available publication evidence, not proof that testing was not carried out.
+“Not reported” or “not established” indicates insufficient reporting, not proof that the test was absent.
 
-## Search and screening
+## 4. Search and screening
 
-| File | Contents |
+**Folder:** `02_Search_and_Screening/`
+
+| File or folder | Contents |
 |---|---|
-| `Search_Rounds_Database_Counts_Formatted.xlsx` | Search date, round, database, searched field, and number of records retrieved. “Supplementary” in the search-round column means the expanded search of 26 October 2026. |
-| `Published_Combined_Search_Blocks_Formatted.xlsx` | Three Boolean concept blocks used to describe the combined search strategy in the manuscript. These are not the exact database-specific historical queries. |
-| `PRISMA_Selection_Summary_Formatted.xlsx` | Selection stages and reported counts for the original and combined searches. These are summary figures, not record-level screening decisions. |
+| `Search_Rounds_Database_Counts_Formatted.xlsx` | Database, date, search round, search field, and retrieved-record counts. The term “Supplementary” in the workbook means the updated search of 26 October 2026. |
+| `Published_Combined_Search_Blocks_Formatted.xlsx` | Three Boolean concept blocks reported in the article; not verbatim platform-specific search histories. |
+| `PRISMA_Selection_Summary_Formatted.xlsx` | Aggregate identification, screening, retrieval, eligibility, and inclusion counts. |
+| `old_query_outcomes/` | Saved database-result exports associated with the original search. |
+| `new_query_outcomes/` | Saved database-result exports associated with the updated search. |
 
-## Integration audit
+The export folders contain bibliographic search results in formats including BibTeX, RIS, and text. They are not a record of individual inclusion/exclusion decisions. Where platform-specific filters or exact executed query syntax were not retained, they cannot be inferred from these exports.
 
-`03_Evidence_Audits/FA_HRT_Integration_Audit_Published_Summary_Formatted.xlsx` — 22 summary rows, four fields: `Analysis`, `Category`, `Publications`, and `Population`.
+## 5. Integration audit
 
-C1 = phase-aware sensing; C2 = reliable or calibrated pre-impact prediction; C3 = bounded robot response; C4 = physical-safety outcome or proxy; C5 = human-centered or target-user evaluation.
+**File:** `03_Evidence_Audits/FA_HRT_Integration_Audit_Published_Summary_Formatted.xlsx`  
+**Coverage:** 22 aggregate summary rows; four columns (`Analysis`, `Category`, `Publications`, `Population`).
 
-`Publications` gives the reported count. `Population` gives the denominator (102 for the full corpus or 18 for the separate post-fall-care analysis). The combination rows are selected reported patterns, not a full study-by-study audit.
+The five criteria are: C1, phase-aware sensing; C2, reliable or calibrated pre-impact prediction; C3, bounded robot response; C4, physical-safety outcome or proxy; and C5, human-centered or target-user evaluation. `Publications` gives the reported count; `Population` gives the relevant denominator (102 for corpus-wide results or 18 for the separate post-fall-care analysis). This workbook does not contain individual publication-level C1–C5 decisions.
