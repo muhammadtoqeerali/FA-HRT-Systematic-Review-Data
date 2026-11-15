@@ -1,0 +1,25 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright © 2026 Muhammad Toqeer Ali, Florenc Demrozi, and Filippo Sanfilippo.
+
+The authors' original data extraction, classification, coding decisions, analytic summaries,
+notes and documentation in this repository are offered under the Creative Commons
+Attribution 4.0 International licence, to the extent the authors hold the relevant rights.
+
+Licence details: https://creativecommons.org/licenses/by/4.0/legalcode
+SPDX identifier: CC-BY-4.0
+
+Excluded third-party materials
+------------------------------
+The original and updated database exports in
+02_Search_and_Screening/old_query_outcomes/ and
+02_Search_and_Screening/new_query_outcomes/ are third-party search-result records.
+The CC BY 4.0 grant above does not apply to their provider-supplied content,
+including any third-party abstracts or other material subject to external rights.
+The same exclusion applies to original third-party text reproduced in research tables.
+Rights held by publishers, database providers and source authors remain unaffected.
+
+Before reposting third-party exports on a public archive, the depositor must verify
+that the applicable database and publisher terms permit redistribution. If permission
+is uncertain, omit those export directories from the public deposit and retain the
+author-created summaries, audits and search documentation instead.

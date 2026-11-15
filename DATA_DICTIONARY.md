@@ -68,7 +68,7 @@ The workbooks retain the publication identifiers P001–P102 used in the review.
 | Fall timing | Elevated risk; active instability; near-onset; direct pre-impact; post-fall; multistage. |
 | Robot function | Model/state estimate; monitor/verify; predict/plan; reactive/care response; physical support/prevention. |
 
-The 22 cross-cutting fields use `1` for coded membership and `0` for non-membership. Several categories may apply to a single publication. Validation settings describe the reported study context, not a quality score. Research-family links are provisional; only P006/P058 and P019/P022 were merged as repeated primary results.
+The 22 cross-cutting fields use `1` for coded membership and `0` for non-membership. Several categories may apply to a single publication. Validation settings describe the reported study context, not a quality score. The `Family summary` worksheet documents the evidence-checked groupings, members and counting rules: **77 broad groups, 79 high-confidence groups and 100 distinct primary-result IDs**. Broad groups allow a documented research-programme connection; high-confidence links require a clearer shared platform or directly traceable research continuation. P028 is a broad F04 link but not part of the repeated P019/P022 classifier result. P080/P085 form broad group F16 while retaining separate high-confidence IDs. Only P006/P058 and P019/P022 share primary-result identifiers. Related studies are not automatically identical experiments.
 
 ## 3. Learned-detector validation audit
 
@@ -102,7 +102,32 @@ The export folders contain bibliographic search results in formats including Bib
 
 ## 5. Integration audit
 
-**File:** `03_Evidence_Audits/FA_HRT_Integration_Audit_Published_Summary_Formatted.xlsx`  
-**Coverage:** 22 aggregate summary rows; four columns (`Analysis`, `Category`, `Publications`, `Population`).
+**Publication-level file:** `FA_HRT_102_C1-C5_Audit.xlsx`  
+**Summary file:** `03_Evidence_Audits/FA_HRT_Integration_Audit_Reconciled_Summary_Formatted.xlsx`  
+**Coverage:** 102 publications; five ratings and a brief supporting observation for each publication–criterion pair.
 
-The five criteria are: C1, phase-aware sensing; C2, reliable or calibrated pre-impact prediction; C3, bounded robot response; C4, physical-safety outcome or proxy; and C5, human-centered or target-user evaluation. `Publications` gives the reported count; `Population` gives the relevant denominator (102 for corpus-wide results or 18 for the separate post-fall-care analysis). This workbook does not contain individual publication-level C1–C5 decisions.
+| Criterion | Rule for a positive (`Yes`) decision |
+|---|---|
+| C1 — Phase-aware sensing | Action-relevant discrimination between fall/instability states; an already-fallen classification by itself is insufficient. |
+| C2 — Reliable/calibrated pre-impact prediction | Direct pre-impact prediction with adequate reliability, uncertainty calibration or risk-sensitive validation. Only the five direct predictor studies are applicable. |
+| C3 — Bounded robot response | An evaluated robot/device action or care response, or an explicitly modeled action envelope. |
+| C4 — Physical-safety outcome | A measured downstream physical consequence or a justified modeled proxy (e.g., recovery, stability, force or impact). |
+| C5 — Human-centered evaluation | Reported intended-user/caregiver experience or functional outcome; participation in a technical experiment alone does not suffice. |
+
+`Yes` counts as met. `No` means the required evidence is not established; `Partial` means relevant but incomplete support. Neither counts as met. `N/A` is used for C2 in the 97 publications without direct pre-impact prediction claims. The audit's `Criteria met` and `Combination` fields count only `Yes` ratings; combinations describe exact positive-criterion sets.
+
+The current Yes counts are **21 (C1), 0 (C2), 71 (C3), 24 (C4) and 14 (C5)**. The satisfied-criterion distribution for 0–5 criteria is **20, 43, 31, 7, 1, 0**. P055 is the sole publication satisfying C1+C3+C4+C5. The separate 18-publication post-fall operational-link summary is carried forward as a distinct analysis and is not calculated from the C1–C5 columns.
+
+## 6. Independent coding and agreement
+
+**Pre-consensus rating files:**
+- `FA_HRT_MTA_Independent_Coding_15_Papers.xlsx`
+- `FA_HRT_FD_Independent_Coding_15_Papers.xlsx`
+
+**Agreement calculations:** `03_Evidence_Audits/FA_HRT_15_Publication_Inter_Rater_Agreement.xlsx`
+
+The MTA and FD files hold original independent ratings for the 15 sampled P-codes (seed 20261109). The MTA evidence explanations were clarified after the rating exercise; the rating categories used for kappa were not changed. The separate agreement file presents the paired categories, observed and chance-expected agreement and unweighted Cohen's kappa. It excludes nonapplicable C2 ratings and does not calculate kappa for C2 when only one publication remains. Consensus ratings may differ from either pre-consensus set.
+
+## 7. Scope of the archived source records
+
+The PRISMA workbook contains aggregate counts rather than individual screening decisions or individual reasons for the 19 full-text exclusions and 12 unretrieved reports. The saved database exports are bibliographic records, not screen-by-screen Rayyan decisions. Research-family identifiers describe verified programme or platform connections, not proof that studies share participants, experimental results or statistically independent systems. Authors' annotations are licensed as stated in `LICENSE`; original third-party database records and source-publication text may have separate redistribution restrictions.
