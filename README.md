@@ -27,12 +27,22 @@ Ratings are based on explicitly supported study evidence. `Yes` counts as a sati
 | Criterion | Publications rated Yes |
 |---|---:|
 | C1 — Phase-aware sensing | 21 |
-| C2 — Reliable or calibrated pre-impact prediction | 0 |
+| C2 — Calibrated or risk-sensitive pre-impact prediction | 0 |
 | C3 — Bounded robot response | 71 |
 | C4 — Physical-safety outcome | 24 |
 | C5 — Human-centered or target-user evaluation | 14 |
 
-The numbers of publications satisfying zero, one, two, three, four and five criteria are, respectively, **20, 43, 31, 7, 1 and 0**. P055 satisfies C1, C3, C4 and C5; C2 is not applicable to that study. No publication satisfies all five criteria. This is the reconciled audit result and supersedes counts in earlier manuscript drafts. The manuscript and response letter should cite this version when they are next updated.
+The numbers of publications satisfying zero, one, two, three, four and five criteria are, respectively, **20, 43, 31, 7, 1 and 0**. P055 satisfies C1, C3, C4 and C5; C2 is not applicable to that study. No publication satisfies all five criteria. This is the reconciled audit result and supersedes counts in earlier manuscript drafts. C2 requires reported calibration, uncertainty characterization, robustness across representative operating conditions relevant to intervention, uncertainty-based withholding, or equivalent risk-sensitive evaluation. Accuracy, false-positive rates, or reported prediction lead times alone do not establish C2; this does not imply that a detector with strong reported performance is inherently unreliable.
+
+
+## Strongest-validation setting (final classification)
+
+Each publication is assigned one strongest reported validation setting. After source-based reassessment, **P062 and P063 are coded as `Laboratory human`**, not `Target-user/care context`:
+
+- **P062:** Perceived usefulness was evaluated with 38 nursing students assisting a simulated patient; the study did not evaluate practicing nurses providing care to actual patients.
+- **P063:** Preliminary voice-call interactions with healthy older adults were described. Experiments involving 12 hospitalized older patients had started, but results from those patients were not reported.
+
+The final distribution across 102 publications is **3 architecture/concept, 4 offline, 15 simulation/model, 30 hardware prototype, 44 laboratory human, 3 target-user/care context, and 3 field/deployment**. These are evaluation-setting categories, not clinical-effectiveness or quality ratings. The revised validation labels do not change the C1–C5 Yes counts. Original pre-consensus inter-rater ratings and kappa calculations are retained as historical records.
 
 ## Agreement analysis
 
